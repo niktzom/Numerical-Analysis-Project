@@ -12,6 +12,8 @@ tmax = 200
 dt = 0.02
 F = lambda t,x: np.array([1.1*x[0] - 0.4*x[0]*x[1], 0.4*x[0] * x[1] - 0.1*x[1]])
 t, x = euler(F,x0,t0,tmax,dt)
+
+
 # Plot the solutions against time
 plt.figure(1)
 plt.plot(t,x[:,:-1],"b-",label = "Rabbits")
@@ -21,6 +23,7 @@ plt.title("Time Evolution of Foxes Population and Rabbits Population")
 plt.xlabel("time")
 plt.ylabel("No. of Rabbits and No. of Foxes")
 plt.legend()
+
 
 # Plot one solution against the other
 # In this plot time is implicit (not one of the axes)
